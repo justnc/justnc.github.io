@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>关于编程的一些建议</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
+html { font-size: 16px; }
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
+#write { max-width: 860px; margin: 0px auto; padding: 30px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 2px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; overflow: hidden; box-sizing: content-box; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(223, 226, 229); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+table tr { border-top: 1px solid rgb(223, 226, 229); margin: 0px; padding: 0px; }
+table tr:nth-child(2n), thead { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(223, 226, 229); border-right-color: rgb(223, 226, 229); border-left-color: rgb(223, 226, 229); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(223, 226, 229); margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-lines { padding-left: 4px; }
+.code-tooltip { box-shadow: rgba(0, 28, 36, 0.3) 0px 1px 1px 0px; border-top: 1px solid rgb(238, 242, 242); }
+.md-fences, code, tt { border: 1px solid rgb(231, 234, 237); background-color: rgb(248, 248, 248); border-radius: 3px; padding: 2px 4px 0px; font-size: 0.9em; }
+code { background-color: rgb(243, 244, 244); padding: 0px 2px; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding-top: 8px; padding-bottom: 6px; }
+.md-task-list-item > input { margin-left: -1.3em; }
+@media print {
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { overflow-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+.md-mathjax-midline { background: rgb(250, 250, 250); }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border-radius: 3px; padding: 2px 0px 0px 4px; font-size: 0.9em; color: inherit; }
+.md-tag { color: rgb(167, 167, 167); opacity: 1; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+.sidebar-tabs { border-bottom: none; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
+.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
+.md-lang { color: rgb(180, 101, 77); }
+.html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
+#md-notification .btn { border: 0px; }
+.dropdown-menu .divider { border-color: rgb(229, 229, 229); }
+.ty-preferences .window-content { background-color: rgb(250, 250, 250); }
+.ty-preferences .nav-group-item.active { color: white; background: rgb(153, 153, 153); }
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name="关于编程的一些介绍" class="md-header-anchor"></a><span>关于编程的一些介绍</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content"><span class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#关于编程的一些介绍">关于编程的一些介绍</a></span><span class="md-toc-item md-toc-h2" data-ref="n3"><a class="md-toc-inner" href="#写在前面">写在前面</a></span><span class="md-toc-item md-toc-h3" data-ref="n4"><a class="md-toc-inner" href="#关于编程">关于编程：</a></span><span class="md-toc-item md-toc-h2" data-ref="n19"><a class="md-toc-inner" href="#基本概念">基本概念</a></span><span class="md-toc-item md-toc-h3" data-ref="n20"><a class="md-toc-inner" href="#编程语言是干嘛的各种语言之间有什么区别">编程语言是干嘛的？各种语言之间有什么区别？</a></span><span class="md-toc-item md-toc-h4" data-ref="n22"><a class="md-toc-inner" href="#c">c++</a></span><span class="md-toc-item md-toc-h4" data-ref="n24"><a class="md-toc-inner" href="#java">Java：</a></span><span class="md-toc-item md-toc-h4" data-ref="n26"><a class="md-toc-inner" href="#c-n26">C#： </a></span><span class="md-toc-item md-toc-h4" data-ref="n28"><a class="md-toc-inner" href="#kotlin">Kotlin： </a></span><span class="md-toc-item md-toc-h4" data-ref="n30"><a class="md-toc-inner" href="#go">Go：</a></span><span class="md-toc-item md-toc-h4" data-ref="n32"><a class="md-toc-inner" href="#python">Python： </a></span><span class="md-toc-item md-toc-h4" data-ref="n34"><a class="md-toc-inner" href="#javascript">JavaScript： </a></span><span class="md-toc-item md-toc-h4" data-ref="n36"><a class="md-toc-inner" href="#php">PHP： </a></span><span class="md-toc-item md-toc-h4" data-ref="n38"><a class="md-toc-inner" href="#lua">Lua：</a></span><span class="md-toc-item md-toc-h3" data-ref="n40"><a class="md-toc-inner" href="#-几个软件开发的方向">几个软件开发的方向</a></span><span class="md-toc-item md-toc-h4" data-ref="n41"><a class="md-toc-inner" href="#移动应用开发">移动应用开发</a></span><span class="md-toc-item md-toc-h4" data-ref="n43"><a class="md-toc-inner" href="#桌面应用开发">桌面应用开发</a></span><span class="md-toc-item md-toc-h4" data-ref="n45"><a class="md-toc-inner" href="#web应用开发">Web应用开发</a></span><span class="md-toc-item md-toc-h4" data-ref="n47"><a class="md-toc-inner" href="#嵌入式开发">嵌入式开发</a></span><span class="md-toc-item md-toc-h4" data-ref="n49"><a class="md-toc-inner" href="#插件开发">插件开发</a></span><span class="md-toc-item md-toc-h3" data-ref="n51"><a class="md-toc-inner" href="#什么是sdk什么是api">什么是SDK？什么是API？</a></span><span class="md-toc-item md-toc-h3" data-ref="n56"><a class="md-toc-inner" href="#什么是cs什么又是bs">什么是C/S？什么又是B/S？</a></span><span class="md-toc-item md-toc-h3" data-ref="n65"><a class="md-toc-inner" href="#什么叫分布式">什么叫分布式</a></span><span class="md-toc-item md-toc-h3" data-ref="n193"><a class="md-toc-inner" href="#什么叫做设计模式">什么叫做设计模式？</a></span><span class="md-toc-item md-toc-h3" data-ref="n68"><a class="md-toc-inner" href="#开发环境的选择">开发环境的选择</a></span><span class="md-toc-item md-toc-h2" data-ref="n72"><a class="md-toc-inner" href="#工具">工具</a></span><span class="md-toc-item md-toc-h3" data-ref="n73"><a class="md-toc-inner" href="#ide">IDE</a></span><span class="md-toc-item md-toc-h2" data-ref="n80"><a class="md-toc-inner" href="#理念和想法">理念和想法</a></span><span class="md-toc-item md-toc-h2" data-ref="n82"><a class="md-toc-inner" href="#推荐一些网站和资料">推荐一些网站和资料</a></span><span class="md-toc-item md-toc-h3" data-ref="n85"><a class="md-toc-inner" href="#教程网站">教程网站：</a></span><span class="md-toc-item md-toc-h3" data-ref="n107"><a class="md-toc-inner" href="#导航站-找到一个你就找到了一个世界）">导航站 (找到一个，你就找到了一个世界）:</a></span><span class="md-toc-item md-toc-h1" data-ref="n126"><a class="md-toc-inner" href="#关于服务器的一些知识">关于服务器的一些知识</a></span><span class="md-toc-item md-toc-h2" data-ref="n127"><a class="md-toc-inner" href="#什么是服务器">什么是服务器？</a></span><span class="md-toc-item md-toc-h2" data-ref="n130"><a class="md-toc-inner" href="#bs结构的访问流程">B/S结构的访问流程</a></span><span class="md-toc-item md-toc-h2" data-ref="n136"><a class="md-toc-inner" href="#代理服务器">代理服务器</a></span><span class="md-toc-item md-toc-h2" data-ref="n157"><a class="md-toc-inner" href="#负载均衡">负载均衡</a></span><span class="md-toc-item md-toc-h2" data-ref="n159"><a class="md-toc-inner" href="#动态网页和静态网页">动态网页和静态网页</a></span></p></div><h2><a name="写在前面" class="md-header-anchor"></a><span>写在前面</span></h2><h3><a name="关于编程" class="md-header-anchor"></a><span>关于编程：</span></h3><ol start='' ><li><span>编程很有趣，但是入门的过程对某些人来说很枯燥。</span></li><li><span>想学好这东西，别光指望上课老师教。</span></li></ol><p><span>    不存在的。大学之后要学的和想学的很多东西，课上内容就很少了，基本想学好的都是自己课外找资料</span></p><ol start='3' ><li><p><span>学习的过程中会遇到很多问题，像是程序报错，软件安装失败等等这一些，一方面，这玩意就是问学长学姐，咱也不一定能回答上来，另一方面，有一些很简单的东西总是来问会让人觉得很烦。所以，这个时候你就需要百度了。</span>
+<span>凡是遇上什么不会的,不知道的，我们建议你先百度再来问，除非你连百度的关键词都不知道怎么设定，或者你是好看的小姐姐（开玩笑的）。</span></p><p><span>但是百度的资料良莠不齐，有的时候还是搞不明白，这个时候更推荐去看官网给的文档，更权威一点，尤其是某些语言或者某些软件。</span></p></li><li><p><span>新手入门还是找个语言先学一下，先了解一下编程的基础概念，知道大概是个什么流程。</span></p></li><li><p><span>英语某种程度上来说很重要，因为总有些时候你需要看一些全英文网站，或者文本资料</span></p></li></ol><h2><a name="基本概念" class="md-header-anchor"></a><span>基本概念</span></h2><h3><a name="编程语言是干嘛的各种语言之间有什么区别" class="md-header-anchor"></a><span>编程语言是干嘛的？各种语言之间有什么区别？</span></h3><p><span>    告诉计算机如何完成你希望他完成的任务。</span></p><h4><a name="c" class="md-header-anchor"></a><span>c++</span></h4><p><span>适用于所有类型的软件开发。由于本身的学习难度、市场对快速开发的需求等问题，目前主要偏向于对品控和性能要求高的专业化软件、游戏，所有高级语言的基础库编写等等。</span></p><h4><a name="java" class="md-header-anchor"></a><span>Java：</span></h4><p><span>大型的复杂分布式应用类型。</span></p><h4><a name="c-n26" class="md-header-anchor"></a><span>C#： </span></h4><p><span>类似Java，目前配合WPF开发桌面应用，开发UWP应用和游戏的比较常见。相对Java有更优秀的语言特性，但由于之前不开放的原因而占有较少的市场比重。</span></p><h4><a name="kotlin" class="md-header-anchor"></a><span>Kotlin： </span></h4><p><span>类似Java，目前由于被Google作为Android的首选开发语言而火热。</span></p><h4><a name="go" class="md-header-anchor"></a><span>Go：</span></h4><p><span>应用程序开发。目前常见于代替PHP的编写，区块链。被应用于搭载 Web 服务器，存储集群或类似用途的巨型中央服务器的系统编程语言。</span></p><p><span>对于高性能分布式系统领域而言，Go 语言无疑比大多数其它语言有着更高的开发效率。它提供了海量并行的支持，这对于游戏服务端的开发而言是再好不过了。</span></p><h4><a name="python" class="md-header-anchor"></a><span>Python： </span></h4><p><span>由于大数据的盛行，由于自动化测试方面的人才需求，以及对于互联网的一些基础应用系统的开发，这种简单易学的语言最近流行起来，对于新手入门而言相当友好。这玩意功能强大但是规范比较少，每个人都有各自的写法，所以入门相对简单，精通则要一定功夫。比较适合写算法，而且有很多别人写好的代码可以拿过来直接使用，只要会用，几乎无所不能。但是也有大佬觉得这玩意有点弟弟，“这玩意儿和perl差不多。如果效率上没有太大的提升，淘汰也就最近几年的事”。</span></p><p><span>同时，它具有可嵌入性，你可以将Python嵌入到C/C++程序，让你的程序的用户获得&quot;脚本化&quot;的能力。 </span></p><h4><a name="javascript" class="md-header-anchor"></a><span>JavaScript： </span></h4><p><span>Any application that can be written in JavaScript, will eventually be written in JavaScript（任何可以用JavaScript来写的应用，最终都将用JavaScript来写）。浏览器唯一指定脚本语言，由于Google的V8引擎和Node.js的出现被应用在更多的领域。</span></p><h4><a name="php" class="md-header-anchor"></a><span>PHP： </span></h4><p><span> PHP 是一种创建动态交互性站点的强有力的服务器端脚本语言 ，但是只能被用在Web领域的语言。</span></p><h4><a name="lua" class="md-header-anchor"></a><span>Lua：</span></h4><p><span> Lua 是一种轻量小巧的脚本语言，用标准C语言编写并以源代码形式开放， 其设计目的是为了嵌入应用程序中，从而为应用程序提供灵活的扩展和定制功能。 </span></p><h3><a name="-几个软件开发的方向" class="md-header-anchor"></a><span>几个软件开发的方向</span></h3><h4><a name="移动应用开发" class="md-header-anchor"></a><span>移动应用开发</span></h4><p><span>开发手机上的app。比如比较火的微信小程序。</span></p><h4><a name="桌面应用开发" class="md-header-anchor"></a><span>桌面应用开发</span></h4><p><span>电脑上的本地应用。</span></p><h4><a name="web应用开发" class="md-header-anchor"></a><span>Web应用开发</span></h4><p><span>通过浏览器访问网站使用的应用。</span></p><h4><a name="嵌入式开发" class="md-header-anchor"></a><span>嵌入式开发</span></h4><p><span>在除了电脑的电子设备上开发的操作系统为嵌入式系统开发，在嵌入式系统上开发的程序就是嵌入式开发。</span></p><h4><a name="插件开发" class="md-header-anchor"></a><span>插件开发</span></h4><p><span> 插件(Plug-in,又称addin、add-in、addon或add-on,又译外挂)是一种遵循一定规范的</span><a href='https://baike.baidu.com/item/应用程序接口'><span>应用程序接口</span></a><span>编写出来的程序。其只能运行在程序规定的系统平台下（可能同时支持多个平台），而不能脱离指定的平台单独运行。因为插件需要调用原纯净系统提供的函数库或者数据。很多</span><a href='https://baike.baidu.com/item/软件/12053'><span>软件</span></a><span>都有插件，插件有无数种。 </span></p><p>&nbsp;</p><h3><a name="什么是sdk什么是api" class="md-header-anchor"></a><span>什么是SDK？什么是API？</span></h3><p><span>    API。即“应用程序编程接口”，一般是封装好的函数或者方法（至于什么是函数，什么是方法，你们学编程语言的时候自然会了解)，你只需要知道这个函数的需要放进去的参数和他运算结束返回的结果就ok了，不需要知道他是怎么实现的，比如字符串连接函数，你只需要按顺序给他两个字符串调用它，就可以完成将两个字符串拼接起来的任务，至于具体实现你不必关心，这就节约了很多时间。</span></p><p>&nbsp;</p><p><span>    SDK是软件开发工具包，是一整套的开发工具，包含但不限于API</span></p><p><span>[note]:</span><a href='https://www.jianshu.com/p/dd2eff92e8fc'><span>什么是API,SDK和API之间有什么关系呢? </span></a></p><h3><a name="什么是cs什么又是bs" class="md-header-anchor"></a><span>什么是C/S？什么又是B/S？</span></h3><p><span>C/S结构：</span></p><p><span>    C/S结构就是 Client/Server(客户机/服务器)，我们手机电脑上的一些需要联网的软件很多就是C/S结构，这些在我们手机或者电脑的软件被称为客户端，他们在工作的时候需要基本上只是负责展示数据以及与用户进行直接交互，而具体需要的一些数据由服务器发送过来。比如知乎，本地的应用只是一个展示工具，所有的文章和内容都是向服务器请求得到的。 </span></p><p><span>B/S结构：</span></p><p><span>    B/S结构就是 （Browser/Server，浏览器/服务器模式） ，这个很好理解，就是说你获取数据还是从服务器获取，但是，数据展示和交互就在浏览器的网页中进行。</span></p><p><span>区别：</span></p><p><span> 1．硬件环境不同:</span>
+<span> C/S 一般建立在专用的网络上, 小范围里的网络环境, 局域网之间再通过专门服务器提供连接和数据交换服务.</span>
+<span>B/S 建立在广域网之上的, 不必是专门的网络硬件环境,例与电话上网, 租用设备. 信息自己管理. 有比C/S更强的适应范围, 一般只要有</span><a href='https://www.baidu.com/s?wd=操作系统&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao'><span>操作系统</span></a><span>和浏览器就行</span>
+<span> 2．对安全要求不同</span>
+<span> C/S 一般面向相对固定的用户群, 对信息安全的控制能力很强. 一般高度机密的信息系统采用C/S 结构适宜. 可以通过B/S发布部分可公开信息.</span>
+<span> B/S 建立在广域网之上, 对安全的控制能力相对弱, 面向是不可知的用户群.</span>
+<span> 3．对程序架构不同</span>
+<span> C/S 程序可以更加注重流程, 可以对权限多层次校验, 对系统运行速度可以较少考虑.</span>
+<span> B/S 对安全以及访问速度的多重的考虑, 建立在需要更加优化的基础之上. 比C/S有更高的要求 B/S结构的程序架构是发展的趋势, 从MS的.Net系列的BizTalk </span><a href='https://www.baidu.com/s?wd=2000&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao'><span>2000</span></a><span> Exchange </span><a href='https://www.baidu.com/s?wd=2000&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao'><span>2000</span></a><span>等, 全面支持网络的构件搭建的系统. SUN 和IBM推的JavaBean 构件技术等,使 B/S更加成熟.</span>
+<span> 4．</span><a href='https://www.baidu.com/s?wd=软件重用&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao'><span>软件重用</span></a><span>不同</span>
+<span> C/S 程序可以不可避免的整体性考虑, 构件的重用性不如在B/S要求下的构件的重用性好.</span>
+<span> B/S 对的多重结构,要求构件相对独立的功能. 能够相对较好的重用.就入买来的餐桌可以再利用,而不是做在墙上的石头桌子</span>
+<span> 5．系统维护不同</span>
+<span> 系统维护是软件生存周期中,开销大, -------重要</span>
+<span> C/S 程序由于整体性, 必须整体考察, 处理出现的问题以及系统升级. 升级难. 可能是再做一个全新的系统</span>
+<span> B/S 构件组成,方面构件个别的更换,实现系统的无缝升级. 系统维护开销减到最小.用户从网上自己下载安装就可以实现升级.</span>
+<span> 6．处理问题不同</span>
+<span> C/S 程序可以处理用户面固定, 并且在相同区域, 安全要求高需求, 与操作系统相关. 应该都是相同的系统</span>
+<span> B/S 建立在广域网上, 面向不同的用户群, 分散地域, 这是C/S无法作到的. 与操作系统平台关系最小.</span>
+<span> 7．用户接口不同</span>
+<span> C/S 多是建立的Window平台上,表现方法有限,对程序员普遍要求较高</span>
+<span> B/S 建立在浏览器上, 有更加丰富和生动的表现方式与用户交流. 并且大部分难度减低,减低开发成本.</span>
+<span> 8．信息流不同</span>
+<span> C/S 程序一般是典型的中央集权的机械式处理, 交互性相对低</span>
+<span> B/S 信息流向可变化, B-B B-C B-G等信息、流向的变化, 更象交易中心 </span></p><h3><a name="什么叫分布式" class="md-header-anchor"></a><span>什么叫分布式</span></h3><p><span>分布式系统（distributed system）是建立在网络之上的软件系统。将一个任务或者说功能分给不同的计算机去完成，一般是因为计算力不够，所以采用分布式计算。</span></p><p><span>具体见百度百科 </span><a href='https://baike.baidu.com/item/分布式系统/4905336?fr=aladdin#4'><span>分布式系统</span></a></p><p>&nbsp;</p><h3><a name="什么叫做设计模式" class="md-header-anchor"></a><span>什么叫做设计模式？</span></h3><p><span> </span><strong><span>设计模式是软件开发人员在软件开发过程中面临的一般问题的解决方案。  每种模式都描述了一个在我们周围不断重复发生的问题，以及该问题的核心解决方案。</span></strong></p><p><span>设计模式提供了一个标准的术语系统，且具体到特定的情景。例如，单例设计模式意味着使用单个对象，这样所有熟悉单例设计模式的开发人员都能使用单个对象，并且可以通过这种方式告诉对方，程序使用的是单例模式。 </span></p><p><span>主要分为四类：创建型模式（Creational Patterns）、结构型模式（Structural Patterns）、行为型模式（Behavioral Patterns）以及J2EE 设计模式。 </span></p><p><span>[推荐参考书] : Design Patterns - Elements of Reusable Object-Oriented Software（中文译名：设计模式 - 可复用的面向对象软件元素） </span></p><h3><a name="开发环境的选择" class="md-header-anchor"></a><span>开发环境的选择</span></h3><p><span>    软件开发一般有两种方式。一个是通过IDE，另一个是文本编辑器+编译器+链接器+其他一些工具。</span></p><p><span>    IDE是集成开发环境的简称，是开发工具的集成，相当于有人把相关工具整理在了一起给你用。但是一上手，直接就是太高级的IDE很容易让人对各种下面的各种编译器调试器链接器以及语言标准太陌生。然后gcc就是c的编译器，g++是c++的编译器。mingw也是工具集合，但是他没集成一些东西，比如项目管理工具，代码分析工具之类的。</span></p><p><span>    然后vs和vs code的区别是什么呢，前者是IDE，是一个完整的软件开发套装。后者只是文本编辑器，相当于是记事本。</span></p><h2><a name="工具" class="md-header-anchor"></a><span>工具</span></h2><h3><a name="ide" class="md-header-anchor"></a><span>IDE</span></h3><p><span>dev-cpp</span><a href='https://sourceforge.net/projects/orwelldevcpp/'><span>下载链接</span></a></p><p><span>    这个软件在实际写东西的时候其实很弟弟，功能很少，而且经常出错，但是对于新手，我们仍然推荐这个弟弟，因为简单，因为方便，相较于其他IDE，dev的安装包很小，不管是下载还是安装都很简单，而且几乎不需要配置，而且练习敲代码的时候不必建立项目，可以直接编译源代码生成可执行程序。</span></p><p><span>Code blocks</span></p><p><span>    不推荐，配置很麻烦，而且不好看。是个弟弟。</span></p><p><span>VC++和VS</span></p><p><span>    用VC++不如用VS，但是VS很大，而且需要建立项目，虽然不麻烦，但是，对新手还是有点莫名奇妙的感觉。好处在于，他会实时监测你的代码，有什么地方编译会报错他会在你写的时候就告诉你，不必像dev那样等到编译的时候才知道</span></p><h2><a name="理念和想法" class="md-header-anchor"></a><span>理念和想法</span></h2><p><span>    要学些什么东西；</span>
+<span>​    新手上来的话，我的意见是静态语言学c++，脚本语言学 批处理/python/js，标签语言学html，还有一个就是特殊的matlab</span>
+<span>​    c++是新手入门必学，不是说能让你用c++开发程序，只是学c++的过程中，能让你对编程语言的了解更加深入，这样再去学其他语言就比较轻松</span>
+<span>​    脚本语言的意思就是不用编译成程序，只需要一个命令解释器就可以直接解析执行。</span>
+<span>​    批处理是操作系统提供解释器，也就是命令行（那个黑框框），这玩意学好就可以帮你做一些很小很无聊的事情，比如重复输入之类的</span>
+<span>​    python这玩意功能强大但是规范比较少，每个都有各自的写法，所以入门相对简单，精通则要一定功夫。比较适合写算法，而且有很多别人写好的代码可以拿过来直接使用，只要会用，几乎无所不能。但是也有大佬觉得这玩意有点弟弟，“这玩意儿和perl差不多。如果效率上没有太大的提升，淘汰也就最近几年的事”。</span>
+<span>​    js是浏览器提供解释器，如果有兴趣做网页开发的话，js就要了解一下</span>
+<span>​    html标签语言，网页的源代码就是这玩意写的，js是一个辅助功能（就是这个辅助有点屌）</span>
+<span>​    matlab这玩意说他特殊是因为，这是一个数学软件的专有语言，那个软件就叫matlab，这个软件，作用很大，比如说有一些高数题就可以拿这个算。</span></p><h2><a name="推荐一些网站和资料" class="md-header-anchor"></a><span>推荐一些网站和资料</span></h2><p><span>    我觉得对于新生而言，与其死学一些自己都不知道是干嘛的东西，不如先开拓一下自己的视野，至少知道各种东西是干嘛的，所以我推荐的导航网站的作用就在于让新手开眼看世界，让你们知道互联网的世界到底有多大，主流的是哪些内容。</span></p><p><span>    闲的无聊的时候就去百度一些有意思的东西，至于什么是所谓有意思的东西，你加入我们网络协会，就说明你一定对网络有着相当程度的好奇，然后就根据这个好奇去了解那些有意思的事情。</span></p><h3><a name="教程网站" class="md-header-anchor"></a><span>教程网站：</span></h3><ul><li><a href='http://c.biancheng.net'><span>c语言中文网</span></a></li><li><a href='https://www.runoob.com'><span>菜鸟教程</span></a></li><li><a href=' https://www.w3cschool.cn'><span>W3c</span></a></li><li><a href='https://www.twle.cn'><span>简单教程</span></a></li><li><a href='https://www.linuxprobe.com'><span>linux就该这么学</span></a></li><li><a href=' https://www.csdn.net'><span>CSDN</span></a></li><li><a href='https://www.cnblogs.com'><span>博客园</span></a></li><li><a href='http://how2j.cn'><span>How2j</span></a></li><li><a href='https://leetcode-cn.com'><span>力扣 </span></a></li><li><a href='http://bestcbooks.com'><span>计算机书籍控</span></a></li></ul><h3><a name="导航站-找到一个你就找到了一个世界）" class="md-header-anchor"></a><span>导航站 (找到一个，你就找到了一个世界）:</span></h3><ul><li><a href='https://www.shentoushi.top'><span>渗透师导航</span></a><span>（想学黑客的就用这个导航）</span></li><li><a href='https://wht.im'><span>万花筒</span></a><span>（推荐它没什么其他原因，简洁好看）</span></li><li><a href='https://kim.plopco.com'><span>KIM </span></a></li><li><a href='https://hao.uisdc.com'><span>设计师网站导航</span></a></li><li><a href='http://hao.shejidaren.com'><span>设计导航</span></a></li><li><a href='http://www.chuangzaoshi.com'><span>创造师导航</span></a></li><li><a href='http://lackar.com/aa/'><span>AA </span></a></li><li><a href='https://search.chongbuluo.com'><span>虫部落.快搜</span></a></li></ul><p><span>学c++看如果想看书的话：</span>
+<span>​    如果一点编程基础都没有就看谭浩强写的书，就那本红皮的</span>
+<span>​    如果觉得自己比较屌，也可以直接看c++ primer  plus第六版，这本书如果学c++肯定是必读的，但如果只是应付学校课程就没啥必要。</span>
+<span>​    另外菜鸟教程c++栏目下最后也推荐了一些相关资源</span></p><h1><a name="关于服务器的一些知识" class="md-header-anchor"></a><span>关于服务器的一些知识</span></h1><h2><a name="什么是服务器" class="md-header-anchor"></a><span>什么是服务器？</span></h2><p><span>    服务器就是电脑。</span></p><p><span>    一般说的服务器就是指向其他电脑提供服务的电脑，最多性能方面会强一些。</span>
+<span>​    服务器最重要的是提供服务，所以一般会装在一些软件来实现和其他终端的交流。所以习惯上就根据这些软件来称呼服务器。比如，Tomcat，Apache，IIS，Nginx等等。而这些因为都是在web上进行的交互所以，又叫做Web服务器。</span></p><h2><a name="bs结构的访问流程" class="md-header-anchor"></a><span>B/S结构的访问流程</span></h2><p><span>    浏览器根据你给的网址，到网络上去寻找这个网址对应的服务器，并且把请求交给服务器，然后服务器根据自己的规则，对你的请求进行解析，然后响应你的请求。这个请求与响应的过程中,请求和响应都是满足一种特定格式的信息。而这种格式就是由通信协议来确定的，比如通常的就是HTTP协议,所以你看到的网址最开始通常就是http://</span></p><p><span>    按照上面所说的访问流程，可能会产生一些问题。</span></p><p><span>    比如说有一些网站的访问量会很大，当有太多的请求同时发给一个服务器，这台服务器可能就忙不过来，然后服务器就崩了。</span></p><p><span>    又比如说，服务器如果直接暴露在网络中，可能会遭到其他人的入侵，这对网络安全会造成极大的威胁。</span></p><p><span>而为了解决这些问题就有了下面几个方法。</span></p><h2><a name="代理服务器" class="md-header-anchor"></a><span>代理服务器</span></h2><p><span>    代理服务器的工作就是一个中间人的作用，本来浏览器的请求应该是直接给他要访问的服务器的，而代理服务器的作用就是在这个过程中加一个步骤，由代理服务器接受这个请求，然后根据一定的规则，转发给原来想访问的服务器。这就叫正向代理。</span></p><p><span>    这样有什么好处呢?</span></p><p><span>    突破自己的IP限制，就是说原本因为某些原因，你的请求是无法抵达服务器的，举个例子就像是你要找马云借钱，让你自己去向他本人借钱，你是借不到的，因为人家和你没有交际，但是假如你刚好认识一个人，这个人和马云有点交情，让他帮你去借钱，就有可能借到，因为马云也不知道他是帮你借钱的，他只知道有个老朋友向他借钱。也就是说正向代理之后，你不但可以请求到原本你请求不到的资源，而且可以在这次请求中隐藏自己的真实身份。</span></p><p>&nbsp;</p><p><span>    相应的有正向代理就有反向代理，就是服务器端发现，向他提交的请求太多了处理不过来，于是就搞了一个代理服务器，这个代理是干嘛的呢？同正向代理一样也可以隐藏自己的真实身份，就是说，马云找了一个人专门帮他处理借钱的事，以后凡是过来要钱的，就这个代理要，然后代理就看一下你这个人是不是之前马云交代过的借钱黑名单上的成员，如果不是，就帮你把请求向后面转告。</span></p><p><span>    但是呢，这个例子在这里有几个不太合适的地方就是，请求方其实是不知道中间有这么一个代理的。</span></p><p><span>    而且，服务器可能不止一台，然后代理服务器接收到请求之后可能会根据一定的规则决定转发给哪个服务器，然后服务器计算完成之后，交给代理服务器，代理服务器拿到结果后响应回去。</span></p><p><span>    反向代理的好处有很多，上面说到的就有：</span></p><ol start='' ><li><span>隐藏后端服务器的信息，管理发送过来的连接，屏蔽黑名单，限制每个用户的连接数</span></li><li><span>提高可扩展性和灵活性，因为外面看不到代理服务器后面是什么情况，所以可以根据情况增减服务器或者修改配置</span></li><li><span>直接返回缓存的数据或者静态内容(html,css,js,图片视频等)。</span></li><li><span>负载均衡。</span></li></ol><p><span>    需要注意的是，正向代理是在请求端配置的，反向代理是在响应端配置的。</span></p><h2><a name="负载均衡" class="md-header-anchor"></a><span>负载均衡</span></h2><p><span>    一台服务器上处理的内容太多了，忙不过来，如果你有好几台服务器，就可以让代理服务器将其他的请求分配给其他空闲的服务器，分担一下负载，这就叫负载均衡。当然这么说是太过简单了。深入的内容还涉及到了负载均衡的算法。</span></p><h2><a name="动态网页和静态网页" class="md-header-anchor"></a><span>动态网页和静态网页</span></h2><p><span>    静态网页不是说网页内容不会动，动态网页也不是说会动的就是动态网页。</span></p><p><span>    静态网页就是一些仅仅由html+css+js+图片视频构成的不和后端交互就可以形成的页面。</span></p><p><span>    动态页面是会因为后端数据的改变而变化的页面。</span></p></div>
+</body>
+</html>
